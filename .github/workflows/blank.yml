@@ -20,8 +20,11 @@ jobs:
         with:
           ci: true
           extra_plugins: |
+            @semantic-release/changelog
             @semantic-release/commit-analyzer
-            @semantic-release/release-notes-generator'
+            @semantic-release/release-notes-generator
+            @semantic-release/exec
+            @semantic-release/git
             @semantic-release/github
           branches: |
             ['main', 'master']
