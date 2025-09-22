@@ -14,11 +14,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
       - name: Release
-        uses: codfish/semantic-release-action@v4.0.0
+        uses: cycjimmy/semantic-release-action@v5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          plugins: |
-            ['@semantic-release/commit-analyzer', '@semantic-release/release-notes-generator', '@semantic-release/github']
-          branches: |
-            ['main']
+          ci: true
+          extra_plugins: |
+            @semantic-release/commit-analyzer
+            @semantic-release/release-notes-generator'
+            @semantic-release/github
