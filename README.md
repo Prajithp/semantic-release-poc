@@ -1,1 +1,1 @@
-# semantic-release-poc - 01
+# semantic-release-poc - 02
